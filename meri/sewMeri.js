@@ -15,10 +15,15 @@ exports.mezgeb = function(tyaqe, mels) {
     }
 }
 
-/*exports.login = function() {
-    
+exports.geba = function(tyaqe, mels) {
+    let sew = new Sew(tyaqe.body)
+    sew.geba().then(function(wetet) {
+        mels.send(wetet)
+    }).catch(function(chgr) {
+        mels.send(chgr)
+    })
 }
-
-exports.login = function() {
+/*
+exports.logout = function() {
     
 }*/

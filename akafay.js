@@ -1,9 +1,8 @@
 const express = require('express')
 const akafay = express.Router()
-const Meri = require('./meri/sewMeri')
+const sewMeri = require('./meri/sewMeri')
 
-akafay.get('/', Meri.bet)
-
-akafay.post('/register', Meri.mezgeb)
-
+akafay.get('/', sewMeri.bet)
+akafay.post('/register', sewMeri.mezgeb)
+akafay.post('/login', sewMeri.geba)
 module.exports = akafay
