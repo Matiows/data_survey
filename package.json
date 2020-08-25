@@ -4,6 +4,7 @@
   "description": "",
   "main": "db.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
