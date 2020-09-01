@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs")
-const Sebseb = require('../mereja').collection("sewoch")
+const Sebseb = require('../mereja').db().collection("sewoch")
 const atari = require('validator')
 
 let Sew = function(wehib) {
@@ -95,6 +95,5 @@ Sew.prototype.geba = function() {
         })
     })
 }
-
 
 module.exports = Sew
