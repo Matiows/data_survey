@@ -1,26 +1,26 @@
 const express = require('express')
 const apple = express()
 const session = require('express-session')
-const Mongostore = require('connect-mongo')
+const MongoStore = require('connect-mongo') (session)
 
 let sessionOptions = session ({
-    secret : "mati please fix this cluster fuck",
+    secret : "mati please fix this cluster",
     resave: false,
-    store: new Mongostore ({client: require('./db')}),
-    saveUninitialized:false,
+    store: new MongoStore ({client: require('./ddb')}),
+    saveUninitialized: false,
     cookie : {maxAge:840000,httpOnly:true}
 })
 
-const akafay = require('./akafay')
+const rrouter = require('./rrouter')
 
+apple.use(sessionOptions)
 apple.use(express.urlencoded({extended: false}))
 apple.use(express.json())
-apple.use(session)
 
 apple.use(express.static('public'))
-apple.set('views', 'melk')
+apple.set('views', 'vview')
 apple.set('view engine', 'ejs')
 
-apple.use('/', akafay)
+apple.use('/', rrouter)
 
 module.exports = apple
