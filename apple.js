@@ -17,7 +17,7 @@ apple.use(sessionOptions)
 apple.use(express.urlencoded({extended: false}))
 apple.use(express.json())
 
-apple.use(express.static('public'))
+apple.use(express.static('ppublic'))
 apple.set('views', 'vview')
 apple.set('view engine', 'ejs')
 

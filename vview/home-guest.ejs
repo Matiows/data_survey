@@ -1,30 +1,197 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Survey</title>
-    </head>
-    <body>
-    <nav>
-        <h1>Welcome</h1>
-        <div>
-            <form action="login" method="POST">
-                Username <input type="text" name="log_email" >
-                Password <input type="password" name="log_password">
-                <input type="submit" name="login_button" value="Sign in">
-            </form>
-        </div>
-    </nav>
-    <div>
-        <form method="POST" action="register">
-            <h2> Create new account</h2>
-            <input type="text" name="reg_username" placeholder="Username" >
-            <input type="email" name="reg_email" placeholder="Email">
-            <input type="password" name="reg_password" placeholder="New password"  >
-            <input type="password" name="reg_password2" placeholder="Confirm password">
-            <input type="submit" name="reg_button" value="Register">
-        </form>
-    </div>
-    </body>
-    </html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Get paid easily">
+	<meta name="keywords" content="online job, work from home, Ethiopians">
+  	<meta name="author" content="BlaBla Group">
+	<title>BlaBla Survay |Welcome</title>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/design.css">
+	
+</head>
+<body>
+<!-- heading part -->
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1>BlaBla Survay</h1>
+		</div>
+			<div class="header-login">
+				<form action="login" method="POST">	
+		<ul>		
+			<li><input type="text" name="log_email" placeholder="  Email or username"></li>
+			<li><input type="password" name="log_password" placeholder="   Password"></li>
+			<li><input class="button" type="submit" name="login_button" value=" LOGIN "></li>
+			
+		</ul>				
+			<div class="lang">
+				<select>
+				<option>ENG</option>
+				<option>AMH</option>
+			</select>
+			</div>
+			
+				
+			</form>
+			</div>
+		
+		</div>
+		
+		</header>
+<!-- sectioning part -->
+	<section id="showcase">
+		<div class="container">
+			<h1>Lorem Epsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+			<div class="teleport-button" >
+			<a href="#button-2"><input class="button-1" type="button" name="Teleport to register" value=" Sign up now "></a>
+			</div>
+		</div>
+		
+	</section>
+	<section id="highlight">
+		<div class="container">
+				<img src="./img/img6.jpg" alt="" class="img-1 left">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			</p>
+			<br>
+				<img src="./img/img4.jpg" alt="" class="img-1 right">		
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+		<br>
+				<img src="./img/img3.jpg" alt="" class="img-1 left">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			</p>
+		</div>
+		</div>
+		
+	</section>
+
+				<!--forms to register-->
+				
+	<section id="signup">
+		<div class="container-1">
+					<h5><a name="button-2"></a></h5>
+			<form method="POST" action="register">
+				<div id="main-form">
+					<div id="sub-form-1">
+				<input type="text" name="reg_username" placeholder="First Name">
+				<input type="text" name="username" placeholder="Last Name">		
+					</div>
+				
+				<div id="sub-form">
+				<input type="text" maxlength="13" name="phone number" placeholder="Phone number">
+				<br>
+				<input type="email" name="reg_email" placeholder="Enter Your Email">
+				<br>
+				<input type="password" name="reg_password" placeholder="create password">
+				<br>
+				<input type="password" name="reg_password2" placeholder="retype password">
+				</div>
+				</div>
+				</div>
+				<div class="link-terms">	
+				<input id="radio" type="radio" name="agreement">I agree to the <a href="">terms of service</a> and <a href="">privacy policy</a>.</input><br>
+				</div>
+			</form>
+			<input class="button-2" type="submit" name="reg_button" value="   Register   ">
+		</div>
+	</section>
+
+	<!--favourite comments-->
+	
+	<section id="card">
+		<img class="pepe" src="./img/pepe.jpg">
+		<h3>Dr.pepe</h3>
+		<h4>CEO at pied piper</h4>
+		<p>   Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
+		sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim veniam.</p>
+	</section>
+
+<!--payment logos-->
+
+	<section id="boxes">
+		<div class="container">
+			<h5>We pay you via </h5>
+			<div class="box">	
+				<img src="./img/master.jpg">
+				<img src="./img/visa.jpg">
+				<img src="./img/american.jpg">
+				<img src="./img/skrill.jpg">
+			</div>
+		</div>
+	</section>
+
+	<!--footer-->
+	
+	<footer>
+		<div class="footer">
+			<div class="footer-content">
+				<div class="footer-items">
+						<img src="">
+						
+					<div class="inline">
+						<h2><span>SUR</span>VEY</h2>
+						<p><strong>SOCIAL MEDIAS</strong></p><br>
+						<div class="social-links">
+							<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+							<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="inline">
+							<h1>Company</h1>
+						<ul>
+							<li><a href="#"></a>About</li>
+							<li><a href="#"></a>Why Us</li>
+							<li><a href="#"></a>Status</li>
+						</ul><br>
+					</div>
+					<div class="inline">
+						<h1>Resorces</h1>
+						<ul>
+							<li><a href="#"></a>Terms of service</li>
+							<li><a href="#"></a>Privacy policy</li>
+							<li><a href="#"></a>Sitemap</li>
+							<li><a href="#"></a>Testimonies</li>
+							<li><a href="#"></a>FAQ</li>
+						</ul>
+					</div>
+					<div class="inline">
+						<h1>Contact Us</h1>
+						<ul>
+							<li><a href="#"></a>business inquiries</li>
+							<li><a href="#"></a>Send feedback</li>
+							<li id="customer-support"><a href="#"></a>Customer support</li>
+							<li id="footer mini border">contact@gmail.com</li>
+							<li>+251-912-345-678</li>
+						</ul>
+				</div>
+				</div>
+		<div class="container">
+			
+					<div class="bottom-footer">
+						<p>SURVEY &copy; 2020, ALL RIGHTS RESERVED.</p>
+				
+					
+				</div>
+				
+		</div>
+			</div>
+			
+		</div>
+	</footer>
+
+</body>
+</html>
