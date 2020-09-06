@@ -2,6 +2,7 @@ const express = require('express')
 const apple = express()
 const session = require('express-session')
 const MongoStore = require('connect-mongo') (session)
+const flash = require('connect-flash')
 
 let sessionOptions = session ({
     secret : "mati please fix this cluster",
@@ -21,6 +22,7 @@ apple.use(express.static('ppublic'))
 apple.set('views', 'vview')
 apple.set('view engine', 'ejs')
 
+apple.use(flash())
 apple.use('/', rrouter)
 
 module.exports = apple

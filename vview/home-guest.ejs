@@ -36,7 +36,11 @@
 				
 			</form>
 			</div>
-		
+		<% errors.forEach(function (messages) { 
+			%>
+			<div><%=messages%></div>
+			<%
+		}) %>
 		</div>
 		
 		</header>
@@ -96,7 +100,7 @@
 	<section id="signup">
 		<div class="container">
 					<h5><a name="button-2"></a></h5>
-			<form method="POST" action="register">
+			<form method="POST" action="/register">
 			<div id="main-form">
 					<div id="sub-form-1">
 				<input type="text" name="reg_username" placeholder="First Name">
@@ -118,8 +122,13 @@
 				<input id="radio" type="radio" name="agreement">I agree to the <a href="">terms of service</a> and <a href="">privacy policy</a>.</input><br>
 					</div>
 		</div>
+		<input class="button-2" type="submit" name="reg_button" value="   Register   ">
 			</form>
-			<input class="button-2" type="submit" name="reg_button" value="   Register   ">
+			<% regErrors.forEach(function (messages) { 
+				%>
+				<div><%=messages%></div>
+				<%
+			}) %>	
 		
 	</section>
 

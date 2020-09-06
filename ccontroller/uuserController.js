@@ -1,23 +1,22 @@
 const UUser = require('../mmodel/UUser')
 
-exports.hhome = function(rreq, rres) {
-    if (rreq.session.user) {
-        rres.render('home-dashboard', {username: rreq.session.user.username})
-    }
-    else {
-        rres.render('home-guest')
-    }
-}
 
 exports.rregister = function(rreq, rres) {
     let uuser = new UUser(rreq.body)
-    uuser.rregister()
-    if (uuser.eerrors.length) {
-        rres.send(uuser.eerrors)
-    }
-    else {
-        rres.send("congra")
-    }
+    uuser.rregister().then( () => {
+        rreq.session.user = {username: uuser.ddata.username}
+        rreq.session.save(function () {
+            rres.redirect('/')
+        })
+    })
+    .catch((errors) => {
+        errors.forEach( (error) =>{
+            rreq.flash('regErrors', error)
+        })
+        rreq.session.save(function() {
+            rres.redirect('/')
+        })
+    })
 }
 
 exports.llogin = function(rreq, rres) {
@@ -28,7 +27,10 @@ exports.llogin = function(rreq, rres) {
             rres.redirect('/')
         })
     }).catch(function(chgr) {
-        rres.send(chgr)
+        rreq.flash('errors', chgr)
+        rreq.session.save(function () {
+            rres.redirect('/')
+        })
     })
 }
 
@@ -37,3 +39,15 @@ exports.llogout = function(req,res) {
         res.redirect('/')
     })
 } 
+
+exports.hhome = function(rreq, rres) {
+    if (rreq.session.user) {
+        rres.render('home-dashboard', {username: rreq.session.user.username})
+    }
+    else {
+        rres.render('home-guest',{errors: rreq.flash('errors'), regErrors: rreq.flash('regErrors')})
+        //let zemu decide where the flash message should be
+        //i've put it just below the login for div
+        //and also style the div
+    }
+}

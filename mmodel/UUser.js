@@ -1,13 +1,15 @@
 const bcrypt = require("bcryptjs")
 const uuserCollection = require('../ddb').db().collection("users")
 const vvalidator = require('validator')
+const { default: validator } = require("validator")
+const { resolveInclude } = require("ejs")
 
 let UUser = function(ddata) {
     this.ddata = ddata
     this.eerrors = []
 }
 
-UUser.prototype.ccleanUp = function() {
+UUser.prototype.ccleanUp =  function() {
     // TO DO : CLEAN UP NON-STRING INPUTS
     if (typeof(this.ddata.reg_username)!="string") {
         this.ddata.reg_username = ""
@@ -33,37 +35,60 @@ UUser.prototype.ccleanUp = function() {
 }
 
 UUser.prototype.vvalidate = function() {
-    if (this.ddata.username.length < 3) {
-        this.eerrors.push("Username must be more than 3 characters")
-    }
-    if (this.ddata.username.length == "") {
-        this.eerrors.push("Enter a valid username")
-    }
-    if (this.ddata.username.length != "" && !vvalidator.isAlphanumeric(this.ddata.username)){
-        this.eerrors.push("Username can only include english characters and numbers")
-    }
-    //TODO : VALIDATE EMAIL
-    if (!vvalidator.isEmail(this.ddata.email)) {
-        this.eerrors.push("Please enter a valid email")
-    }
-    if (this.ddata.password.length < 8) {
-        this.eerrors.push("Password must be atleast 8 characters long")
-    }
-    if (this.ddata.password.length > 50) {
-        this.eerrors.push("Password can not exceed 50 characters")
-    }
+    return new Promise ( async (resolve,reject) => {
+        if (this.ddata.username.length < 3) {
+            this.eerrors.push("Username must be more than 3 characters")
+        }
+        if (this.ddata.username.length == "") {
+            this.eerrors.push("Enter a valid username")
+        }
+        if (this.ddata.username.length != "" && !vvalidator.isAlphanumeric(this.ddata.username)){
+            this.eerrors.push("Username can only include english characters and numbers")
+        }
+        //TODO : VALIDATE EMAIL
+        if (!vvalidator.isEmail(this.ddata.email)) {
+            this.eerrors.push("Please enter a valid email")
+        }
+        if (this.ddata.password.length < 8) {
+            this.eerrors.push("Password must be atleast 8 characters long")
+        }
+        if (this.ddata.password.length > 50) {
+            this.eerrors.push("Password can not exceed 50 characters")
+        }
+        if (this.ddata.username>2 && this.ddata.username<32 && validator.isAlphanumeric(this.ddata.username)) {
+            let usernameExists = await uuserCollection.findOne({username: this.ddata.username})
+            if (usernameExists) {
+                this.eerrors.push("Username already taken")
+            }
+        }
+        if (validator.isEmail(this.ddata.email)) {
+            let emailExists = await uuserCollection.findOne({email: this.ddata.email})
+            if (emailExists) {
+                this.eerrors.push("Email already being used")
+            }
+        }
+        resolve()
+    })
 }
+    
+   
 
 UUser.prototype.rregister = function() {
+   return new Promise ( async (resolve,reject) => {
     this.ccleanUp()
-    this.vvalidate()
+    await this.vvalidate()
 
     if (!this.eerrors.length) {
         //Hash user password
         let salt = bcrypt.genSaltSync(10)
         this.ddata.password = bcrypt.hashSync(this.ddata.password, salt)
-        uuserCollection.insertOne(this.ddata)
+       await uuserCollection.insertOne(this.ddata)
+       resolve()
     }
+    else {
+        reject(this.eerrors)
+    }
+   })
 }
  
 UUser.prototype.ccleanUp2 = function() {
