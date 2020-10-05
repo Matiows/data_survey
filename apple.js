@@ -7,22 +7,22 @@ const flash = require('connect-flash')
 let sessionOptions = session ({
     secret : "mati please fix this cluster",
     resave: false,
-    store: new MongoStore ({client: require('./ddb')}),
+    store: new MongoStore ({client: require('./db')}),
     saveUninitialized: false,
     cookie : {maxAge:840000,httpOnly:true}
 })
 
-const rrouter = require('./rrouter')
+const router = require('./router')
 
 apple.use(sessionOptions)
 apple.use(express.urlencoded({extended: false}))
 apple.use(express.json())
 
-apple.use(express.static('ppublic'))
-apple.set('views', 'vview')
+apple.use(express.static('public'))
+apple.set('views', 'view')
 apple.set('view engine', 'ejs')
 
 apple.use(flash())
-apple.use('/', rrouter)
+apple.use('/', router)
 
 module.exports = apple
