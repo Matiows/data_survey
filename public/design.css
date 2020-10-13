@@ -1,110 +1,40 @@
-/*html{
-	margin:0 160px 0 146px;
-}*/
-body{
-	font: 15px/1.5 Arial, Helvetica,sans-serif;
-	background-color: #fff;
-	margin:0;
+/*Navigation Bar*/
+.navbar-dark
+{
+	background-color: #333536!important;
+	padding: 30px 0 30px 0;
+}
+.navbar-dark h1
+{
 	padding: 0;
-
+	font-size: 55px!important;
 }
-/*HEADING*/
-.container {
-	width: 80%;
-	margin:auto;
-	overflow: hidden;
-	min-width: 460px;
+.form-control1 ,.button
+{
+	box-shadow: 14px 13px 20px black;
 }
-.container1 {
-	width: 100%;
-	margin:auto;
-	overflow: hidden;
-	min-width: 460px;
-}
-header {
-	background-color: #333536;
-	color: white;
-	padding-top: 20px;
-	min-height: 70px;
-}
-/*branding header*/
-header #branding h1 {
-	margin-top:0px;
-	padding-top: 0px;
-	font-size: 55px;
-}
-header #branding {
-	float: left;
-}
-/*form*/
-header ul{
-	margin:0;
-	padding:0;
-}
-header li{
-	float: left;
-	list-style-type: none;
-	padding:0 20px 0 20px;
-}
-
-select.icon-menu option {
-background-repeat: no-repeat;
-background-position: bottom left;
-padding-left: 30px;
-}
-
-header form{
-	float:right;
-	margin-top: 35px;
-}
-header input {
-	border-radius: 2em 2em 2em 2em;
-	border: none;
-	font-size: 16px;
-
-}
-
-/*language*/
-
-header select{
-	border:none;
-	border-radius: 22px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	padding:3px 8px;
-	background-color: #494f52;
-	color:#fff;
-	
-}
-/*login botton*/
-.button:hover{
-	border: none;
-	box-shadow: 0px 15px 20px rgba(0,0,0,.3);
-	background-color:#97de40 ;
-}
-
-
-/*SECTIONING*/
-#showcase {
-	background-color: #ebebeb;
-	margin-top: 0px;
-	padding-bottom: 80px;
+.jumbotron
+{
 	border-bottom-right-radius: 200px;
-	
+	background-color: #ebebeb;
+	padding-bottom: 80px;
+
 }
-#showcase h1 {
+.jumbotron h1
+{
+	padding-top: 0px!important;
 	margin: 0px;
 	font: 90px Helvetica;
 	text-align:center;
 }
-#showcase p{
+.jumbotron p
+{
 	font:30px Arial ;
 	padding-right: 6%;
 	padding-left: 6%;
 	font-weight: normal;
 }
-#showcase .button-1{
+.teleport-button .button-1{
 	text-transform: uppercase;
 	font: 50px Arial;
 	cursor: pointer;
@@ -113,252 +43,130 @@ header select{
 	border-radius: 23px;
 	filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.25));
 }
-.teleport-button{
+
+.teleport-button 
+{
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 33px;
-	
 }
-#showcase .button-1:hover{
+.button-1:hover
+{
 	box-shadow: 0px 15px 20px rgba(0,0,0,.4);
 	background-color:#4bab8f;
 }
-#highlight {
-	margin-top: 100px;
+.col p
+{
+	padding-top: 15%!important;
 }
-#highlight img {
-	width: 150px;
-
+.card
+{
+	margin-left: 20px;
+	margin-bottom: 20px;
+	width: 500px;
 }
-#highlight .img-1{
-max-width: 300px;
-padding-top: 10px;
+.p-2 img
+{
+	width: 150px!important;
 }
-#highlight .img-1.left{
-	float: left;
+.p-2 p
+{
+	color: black;
 }
-
-#highlight p{
-	margin-bottom: 12px;
-	font-size:20px;
-	text-align: justify;
-	padding-top: 80px;
-	;
+.card-img-top
+{
+	width: 200px;
 }
-#highlight .img-1.right{
-	float: right;
-	max-width: 25%;
+.border-light 
+{
+	width: 500px;
 }
-
-/*favourite commentes section-->*/
-
-#card{
-	float: right;
-	background-color: #ebebeb;
-	padding:20px 40px 20px 40px;
-	margin-right: 10%;
-	margin-top: 90px;
+.border-light {
+	margin-left: 20px;
+    border-color: #f8f9fa!important;
+    box-shadow: 0 0 20px #00000052;
 }
-#card .pepe{
+.nav-item 
+{
+	padding-right: 20px;
+}
+.navbar-brand
+{
+	padding-left: 20px;
+	font-size: 55px;
+	text-shadow: 20px 13px 20px black;
+}
+.form-sec
+{
+	margin: 30px 0px 30px 80px;
+}
+.col img
+{
 	width: 100px;
-	float: left;
+	padding:0!important;
 }
-
-#card h4{		
-	color:#869179;
+.col{
+	text-align: center;
+	width: 150px;
 }
-#card p{
-	font-size: 20px;
-	float: left;
+.d-flex 
+{
+	background-color: #fff!important;
+	margin-left: 20px;
 }
-
-	/*forms to register*/
-
-
-#signup{
-	padding-top: 70px;
-	margin-left: 13%;
-	float: left;
-}
-
-#main-form{
-	font-size: 45px;
-}
-#sub-form-1 input {
-	height: 29px;
+.payment
+{
 	text-align: center;
 }
-#sub-form input{
-	width: 352px;
-	height: 29px;
-	text-align: center;
-	font-size: 15px;
-}
-#signup .button-2{
-	margin-left: 4%;
-	margin-top: 5px;
-	font-size: 30px;
-	border-radius: 13px;
-	background-color: #4bab8f;
-	color: white;
-	border:none;
-	box-shadow: 0px 8px 15px rgba(0,0,0,.4);
-	margin-bottom:30px;
-}
-#signup .button-2:hover{
-	box-shadow: 0px 15px 20px rgba(0,0,0,.4);
-	background-color:#525949;
-}
+.nav-separet
+{
+font-size: 25px;
 
-			/*.......Payment boxes........*/
-
-
-#boxes .container1 h5{
-
-	text-align: center;
-			
-	font-size: 75px;
-	font-weight: normal;
-	color: #869179;
-	padding:0;
-	margin:0;
+color: #fff;
 }
-.box img{		
-	display: inline-block;
-	padding: 0 40px 0 40px;
-	width: 5%;
-	margin-bottom: 5%;
-}
-.box{
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
 
-	text-align: center;
-	}
-/*FOOTING*/
-.footer {
-	background-color: #333536;
-	width: 100%;
-	letter-spacing: 2px;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
 
-}
-#customer-support{
-	border-bottom: 2px solid grey;
-	margin-right: 180px;
-}
-footer h2{
-	font-size: 40px;
-	padding-bottom: 0px;
-}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+*/
 
 
 
-footer .inline {
-	width: 25%;
-	float: left;
-	text-align: left;
-}
-footer .inline ul{
-	margin:0;
-	padding: 0;
-	list-style: none;
-	color:#d3d3d3;	
-}
-footer .inline ul a{
-	text-transform: uppercase;
-	text-decoration: none;
-	color:gray;
-	font-size: 12px;
-	color:#d3d3d3;
-	margin:0;
-	padding:0;
-}
-footer .inline  p{
-
-	display: inline;
-	color: #fff;
-}
-footer .inline  h1{
-	color: #d3d3d3;
-	margin-bottom: 1px;
-}
-footer .footer-items h2{
-color: #d3d3d3;
-margin-top: 20px;
-}
-footer .footer-inline  span{
-color: #97de40 ;
-}footer .social-links ,a{
-	font-size: 50px;
-	color: #fff;
-}
-.inline ul{
-	margin:0;
-	padding:0;
-}
-.bottom-footer p{
-	text-align: center;
-	border-top: 2px solid #d3d3d3;
-	color: #d3d3d3;
-	left:45%;
-	padding-top: 10px;
-}
 
 
-/*CLASSES*/
-.button{
-	background-color: #2d2d30;
-	color: white;
-	border:3px solid #97de40;
-	margin-left: 20px
-}
-.paragraph-right{
-	text-align: right;
-	padding-left :150px;
-	padding-top: -10px;
-	
-}
-.img-left img {
-	float: left;
-}
-.img-right img {
-	float: right;
-}
-
-.social-media {
-	color: #fff;
-	padding-left: 5px;
-	font-size: 35px;
-	margin-left:10px;
-}
-#signup .link-terms a{
-	color:lightblue;
-	font-size: 15px;
-	font-weight: normal;
-	text-decoration: none;
-}
 
 
-/* media Queries*/
 
 
-@media (max-width: 768px){
-	header #branding,
-	header form,ul,header .lang ,footer .inline ,footer .inline #customer-support 
 
-	{
-		float:none;
-		text-align: center;
-		width: 100%;
 
-	}
-	#showcase input {
-		text-align: center;
-	}
-	 #card ,#card p {
-		float:none;
-		text-align: left;
-		width: 100%;
-		
-		
-	}
-	
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

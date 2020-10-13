@@ -8,204 +8,294 @@
   	<meta name="author" content="BlaBla Group">
 	<title>BlaBla Survay |Welcome</title>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/design.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 	<link rel="stylesheet" href="/design.css"> 
 	
 </head>
 <body>
 <!-- heading part -->
-	<header>
-		<div class="container">
-			<div id="branding">
-				<h1>BlaBla Survay</h1>
-		</div>
-			<div class="header-login">
-				<form action="login" method="POST">	
-		<ul>		
-			<li><input type="text" name="log_email" placeholder="  Email or username"></li>
-			<li><input type="password" name="log_password" placeholder="   Password"></li>
-			<li><input class="button" type="submit" name="login_button" value=" LOGIN "></li>
-			<li><select class="icon-menu">
-					<option>ENG</option>
-					<option>AMH</option>
-				</select>
-			</li>
-		</ul>				
+
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color">
+	<a class="navbar-brand" href="#">BlaBla Survay</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+	  aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+	  <ul class="navbar-nav ml-auto">
+		<li class="nav-item active">
+			<input class="form-control form-control1 mr-sm-2" type="text" name="log_email" placeholder="  Email or username">
 			
-			
-			
-				
-			</form>
-			</div>
+		</li>
+		<li class="nav-item">
+			<input class="form-control form-control1 mr-sm-2" type="password" name="log_password" placeholder="   Password">		  
+		</li>
+		<li class="nav-item active">
+			<input class="button" type="submit" name="login_button" value=" LOGIN ">			
+		</li>
+		<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+			aria-haspopup="true" aria-expanded="false"> Lang </a>
+		  <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+			<a class="dropdown-item" href="#">AMH</a>
+			<a class="dropdown-item" href="#">ENG</a>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+  </nav>
+  <!--/.Navbar -->
+
+	
 		<% errors.forEach(function (messages) { 
 			%>
 			<div><%=messages%></div>
 			<%
 		}) %>
 		</div>
-		
-		</header>
-<!-- sectioning part -->
-	<section id="showcase">
-		<div class="container">
-			<h1>Lorem Epsum</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-			<div class="teleport-button" >
-			<a href="#button-2"><input class="button-1" type="button" name="Teleport to register" value=" Sign up now "></a>
-			</div>
+<div class="jumbotron jumbotron-fluid">
+	<div class="container-fluid">
+		<h1>Lorem Epsum</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+		<div class="teleport-button" >
+		<a href="#button-2"><input class="button-1" type="button" name="Teleport to register" value=" Sign up now "></a>
 		</div>
-		
-	</section>
-	<section id="highlight">
-		<div class="container">
-				<img src="./img/img6.jpg" alt="" class="img-1 left">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-			</p>
-			<br>
-				<img src="./img/img4.jpg" alt="" class="img-1 right">		
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-		<br>
-				<img src="./img/img3.jpg" alt="" class="img-1 left">
+	</div>
+  </div>
+	<div class="d-flex p-3 text-white">
+		<div class="p-2"><img src="./img/img6.jpg" alt=""></div>
+		<div class="p-2 d-flex align-items-center">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 			</p>
 		</div>
-		</div>
-		
-	</section>
+	</div>
 
-	
-	<!--favourite comments-->
-	
-	<section id="card">
-		<div class="favourite-comments">
-		<img class="pepe" src="./img/pepe.jpg">
-		<h3>Dr.pepe</h3>
-		<h4>CEO at pied piper</h4>
-		<p>   Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-		sed do eiusmod tempor incididunt ut labore et <br>dolore magna aliqua. Ut enim ad minim veniam.</p>	
+	<div class="d-flex p-3 text-white">
+		<div class="p-2 d-flex align-items-center">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			</p>
 		</div>
-		
-	</section>
+		<div class="p-2"><img src="./img/img4.jpg" alt=""></div>
+	</div>
 
-			<!--forms to register-->
-				
-	<section id="signup">
-		<div class="container">
-					<h5><a name="button-2"></a></h5>
-			<form method="POST" action="/register">
-			<div id="main-form">
-					<div id="sub-form-1">
-				<input type="text" name="reg_username" placeholder="First Name">
-				<input type="text" name="username" placeholder="Last Name">		
-					</div>
-				
-					<div id="sub-form">
-				<input type="text" maxlength="13" name="phone number" placeholder="Phone number">
-				<br>
-				<input type="email" name="reg_email" placeholder="Enter Your Email">
-				<br>
-				<input type="password" name="reg_password" placeholder="create password">
-				<br>
-				<input type="password" name="reg_password2" placeholder="retype password">
-					</div>
-			</div>
-				
-					<div class="link-terms">	
-				<input id="radio" type="radio" name="agreement">I agree to the <a href="">terms of service</a> and <a href="">privacy policy</a>.</input><br>
-					</div>
+	<div class="d-flex p-3 text-white">
+		<div class="p-2"><img src="./img/img3.jpg" alt=""></div>
+		<div class="p-2 d-flex align-items-center">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			</p>
 		</div>
-		<input class="button-2" type="submit" name="reg_button" value="   Register   ">
-			</form>
+	</div>
+<hr>
+				<!--forms to register-->
+			<div class="row justify-content-between form-sec">
+				<div class="col-4">
+							
+					<form class="text-center border border-light p-5" action="#!">
+
+						<p class="h4 mb-4">Sign up</p>
+					
+						<div class="form-row mb-4">
+							<div class="col">
+								<!-- First name -->
+								<input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+							</div>
+							<div class="col">
+								<!-- Last name -->
+								<input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+							</div>
+						</div>
+					
+						<!-- E-mail -->
+						<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+					
+						<!-- Password -->
+						<input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+						<small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+							At least 8 characters and 1 digit
+						</small>
+					
+						<!-- Phone number -->
+						<input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+						<small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+							Optional - for two step authentication
+						</small>
+					
+						<!-- Newsletter -->
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+							<label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+						</div>
+					
+						<!-- Sign up button -->
+						<button class="btn btn-info my-4 btn-block" type="submit">Sign up</button>
+					
+						<!-- Social register -->
+						<p>or sign up with:</p>
+					
+						<a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+						<a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+						<a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+						<a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+					
+						<hr>
+					
+						<!-- Terms of service -->
+						<p>By clicking
+							<em>Sign up</em> you agree to our
+							<a href="" target="_blank">terms of service</a>
+					
+					</form>
+				</div>
+
+				<div class="col-4">
+
+				  	<!--favourite comments-->
+
+					<div class="card" style="width:400px">
+						<img class="card-img-top" src="./img/pepe.jpg" alt="Card image">
+						<div class="card-body">
+						  <h3 class="card-title">Dr.Pepe</h3>
+						  <h4 class="card-title">CEO at pied piper</h4>
+						  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+						  <a href="#" class="btn btn-secondary">See Profile</a>
+						</div>
+					  </div>
+
+				</div>
+			  </div>
+<hr>
+	
 			<% regErrors.forEach(function (messages) { 
 				%>
 				<div><%=messages%></div>
 				<%
 			}) %>	
 		
-	</section>
-
+<h1 class="payment">We Pay You Via</h1>
 <!--payment logos-->
-
-	<section id="boxes">
-		<div class="container1">
-			<h5>We pay you via </h5>
-			<div class="box">	
-				<img src="./img/master.jpg">
-				<img src="./img/visa.jpg">
-				<img src="./img/american.jpg">
-				<img src="./img/skrill.jpg">
-			</div>
-		</div>
-	</section>
-
+	<div class="d-flex align-items-start bg-light mb-3" >
+		<div class="col"><img src="./img/master.jpg"></div>
+		<div class="col"><img src="./img/visa.jpg"></div>
+		<div class="col"><img src="./img/american.jpg"></div>
+		<div class="col"><img src="./img/skrill.jpg"></div>
+	</div>
 	<!--footer-->
 	
-	<footer>
-		<div class="footer">
-			<div class="footer-content">
-				<div class="footer-items">
-						<img src="">
-						
-					<div class="inline">
-						<h2><span>SUR</span>VEY</h2>
-						<p><strong>SOCIAL MEDIAS</strong></p><br>
-						<div class="social-links">
-							<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
-							<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-						</div>
-					</div>
-					<div class="inline">
-							<h1>Company</h1>
-						<ul>
-							<li><a href="#"></a>About</li>
-							<li><a href="#"></a>Why Us</li>
-							<li><a href="#"></a>Status</li>
-						</ul><br>
-					</div>
-					<div class="inline">
-						<h1>Resorces</h1>
-						<ul>
-							<li><a href="#"></a>Terms of service</li>
-							<li><a href="#"></a>Privacy policy</li>
-							<li><a href="#"></a>Sitemap</li>
-							<li><a href="#"></a>Testimonies</li>
-							<li><a href="#"></a>FAQ</li>
-						</ul>
-					</div>
-					<div class="inline">
-						<h1>Contact Us</h1>
-						<ul>
-							<li><a href="#"></a>business inquiries</li>
-							<li><a href="#"></a>Send feedback</li>
-							<li id="customer-support"><a href="#"></a>Customer support</li>
-							<li id="footer mini border">contact@gmail.com</li>
-							<li>+251-912-345-678</li>
-						</ul>
-				</div>
-				</div>
-		<div class="container">
-			
-					<div class="bottom-footer">
-						<p>SURVEY &copy; 2020, ALL RIGHTS RESERVED.</p>
-				
-					
-				</div>
-				
-		</div>
-			</div>
-			
-		</div>
-	</footer>
 
+	<footer class="bg-light text-center text-lg-left">
+		<!-- Grid container -->
+		<div class="container p-4">
+		  <!--Grid row-->
+		  <div class="row">
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+			  <h5 class="text-uppercase"><span>SUR</span>VEY</h5>
+	  
+			  <ul class="list-unstyled mb-0">
+				<li>
+				  <a href="#!" class="text-dark"><p><strong>SOCIAL MEDIAS</strong></p></a>
+				</li>
+				<li>
+					<div class="social-links">
+						<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+						<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</li>
+			  </ul>
+			</div>
+			<!--Grid column-->
+	  
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+			  <h5 class="text-uppercase mb-0">Company</h5>
+	  
+			  <ul class="list-unstyled">
+				<li>
+				  <a href="#!" class="text-dark">About</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Why Us</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Status</a>
+				</li>
+			  </ul>
+			</div>
+			<!--Grid column-->
+	  
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+			  <h5 class="text-uppercase">Resorces</h5>
+	  
+			  <ul class="list-unstyled mb-0">
+				<li>
+				  <a href="#!" class="text-dark">Terms of service</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Privacy policy</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Sitemap</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Testimonies</a>
+				</li>
+				<li>
+					<a href="#!" class="text-dark">FAQ</a>
+				</li>
+			  </ul>
+			</div>
+			<!--Grid column-->
+	  
+			<!--Grid column-->
+			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+			  <h5 class="text-uppercase mb-0">Contact Us</h5>
+	  
+			  <ul class="list-unstyled">
+				<li>
+				  <a href="#!" class="text-dark">business inquiries</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Send feedback</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">Customer support</a>
+				</li>
+				<li>
+				  <a href="#!" class="text-dark">contact@gmail.com</a>
+				</li>
+				<li>
+					<a href="#!" class="text-dark">+251-912-345-678</a>
+				</li>
+			  </ul>
+			</div>
+			<!--Grid column-->
+		  </div>
+		  <!--Grid row-->
+		</div>
+		<!-- Grid container -->
+	  
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+		  <p>SURVEY &copy; 2020, ALL RIGHTS RESERVED.</p>
+		</div>
+		<!-- Copyright -->
+	  </footer>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>

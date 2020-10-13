@@ -16,7 +16,7 @@ const router = require('./router')
 
 apple.use(sessionOptions)
 apple.use(express.urlencoded({extended: false}))
-apple.use(express.json())
+apple.use(express.json()) 
 
 apple.use(express.static('public'))
 apple.set('views', 'view')
