@@ -1,4 +1,18 @@
 just some temporary text 
 or messages you want to send for other developers
+keycode 
+# = task
+! = bug
+* = information
++ = warning
 
-!bazunqa
+*mongodb was updated to 3.6.2
+
+*view/includes/flash.ejs is a file used for flash
+messages both for errors and success
+
+* SYNTAX for flashing messages on top of the page
+for flashing error messages:
+req.flash("errors", "**Your flash message**")
+for flashing success messages:
+req.flash("success", "**Your flash message**")

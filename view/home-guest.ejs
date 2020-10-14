@@ -1,59 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Get paid easily">
-	<meta name="keywords" content="online job, work from home, Ethiopians">
-  	<meta name="author" content="BlaBla Group">
-	<title>BlaBla Survay |Welcome</title>
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
- 	<link rel="stylesheet" href="/design.css"> 
+<%- include('includes/header') %>
+<!-- navbar is located in header-->
 	
-</head>
-<body>
-<!-- heading part -->
-
-<!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color">
-	<a class="navbar-brand" href="#">BlaBla Survay</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-	  aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-	  <span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-	  <ul class="navbar-nav ml-auto">
-		<li class="nav-item active">
-			<input class="form-control form-control1 mr-sm-2" type="text" name="log_email" placeholder="  Email or username">
-			
-		</li>
-		<li class="nav-item">
-			<input class="form-control form-control1 mr-sm-2" type="password" name="log_password" placeholder="   Password">		  
-		</li>
-		<li class="nav-item active">
-			<input class="button" type="submit" name="login_button" value=" LOGIN ">			
-		</li>
-		<li class="nav-item dropdown">
-		  <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-			aria-haspopup="true" aria-expanded="false"> Lang </a>
-		  <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-			<a class="dropdown-item" href="#">AMH</a>
-			<a class="dropdown-item" href="#">ENG</a>
-		  </div>
-		</li>
-	  </ul>
-	</div>
-  </nav>
-  <!--/.Navbar -->
-
-	
-		<% errors.forEach(function (messages) { 
-			%>
-			<div><%=messages%></div>
-			<%
-		}) %>
-		</div>
+<%- include('includes/flash') %>
 <div class="jumbotron jumbotron-fluid">
 	<div class="container-fluid">
 		<h1>Lorem Epsum</h1>
@@ -100,21 +48,18 @@
 			<div class="row justify-content-between form-sec">
 				<div class="col-4">
 							
-					<form class="text-center border border-light p-5" action="#!">
-
+					<form id="registration-form" class="text-center border border-light p-5"  method="POST" action="/register">
+						<% regErrors.forEach(function (messages) { 
+							%>
+							<div class="alert alert-danger"><%=messages%></div>
+							<%
+						}) %>
 						<p class="h4 mb-4">Sign up</p>
-					
+						<!-- Username -->
 						<div class="form-row mb-4">
-							<div class="col">
-								<!-- First name -->
-								<input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-							</div>
-							<div class="col">
-								<!-- Last name -->
-								<input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-							</div>
+							<input type="text" id="username" class="form-control" placeholder="First name">
 						</div>
-					
+						
 						<!-- E-mail -->
 						<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
 					
@@ -176,11 +121,7 @@
 			  </div>
 <hr>
 	
-			<% regErrors.forEach(function (messages) { 
-				%>
-				<div><%=messages%></div>
-				<%
-			}) %>	
+				
 		
 <h1 class="payment">We Pay You Via</h1>
 <!--payment logos-->
@@ -190,112 +131,5 @@
 		<div class="col"><img src="./img/american.jpg"></div>
 		<div class="col"><img src="./img/skrill.jpg"></div>
 	</div>
-	<!--footer-->
-	
 
-	<footer class="bg-light text-center text-lg-left">
-		<!-- Grid container -->
-		<div class="container p-4">
-		  <!--Grid row-->
-		  <div class="row">
-			<!--Grid column-->
-			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-			  <h5 class="text-uppercase"><span>SUR</span>VEY</h5>
-	  
-			  <ul class="list-unstyled mb-0">
-				<li>
-				  <a href="#!" class="text-dark"><p><strong>SOCIAL MEDIAS</strong></p></a>
-				</li>
-				<li>
-					<div class="social-links">
-						<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						<a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
-						<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					</div>
-				</li>
-			  </ul>
-			</div>
-			<!--Grid column-->
-	  
-			<!--Grid column-->
-			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-			  <h5 class="text-uppercase mb-0">Company</h5>
-	  
-			  <ul class="list-unstyled">
-				<li>
-				  <a href="#!" class="text-dark">About</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Why Us</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Status</a>
-				</li>
-			  </ul>
-			</div>
-			<!--Grid column-->
-	  
-			<!--Grid column-->
-			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-			  <h5 class="text-uppercase">Resorces</h5>
-	  
-			  <ul class="list-unstyled mb-0">
-				<li>
-				  <a href="#!" class="text-dark">Terms of service</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Privacy policy</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Sitemap</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Testimonies</a>
-				</li>
-				<li>
-					<a href="#!" class="text-dark">FAQ</a>
-				</li>
-			  </ul>
-			</div>
-			<!--Grid column-->
-	  
-			<!--Grid column-->
-			<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-			  <h5 class="text-uppercase mb-0">Contact Us</h5>
-	  
-			  <ul class="list-unstyled">
-				<li>
-				  <a href="#!" class="text-dark">business inquiries</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Send feedback</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">Customer support</a>
-				</li>
-				<li>
-				  <a href="#!" class="text-dark">contact@gmail.com</a>
-				</li>
-				<li>
-					<a href="#!" class="text-dark">+251-912-345-678</a>
-				</li>
-			  </ul>
-			</div>
-			<!--Grid column-->
-		  </div>
-		  <!--Grid row-->
-		</div>
-		<!-- Grid container -->
-	  
-		<!-- Copyright -->
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-		  <p>SURVEY &copy; 2020, ALL RIGHTS RESERVED.</p>
-		</div>
-		<!-- Copyright -->
-	  </footer>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
-</html>
+<%- include('includes/footer') %>

@@ -1,5 +1,17 @@
 const User = require('../model/User')
 
+exports.mustBeLoggedIn = function (req, res, next) {
+    if (req.session.user) {
+         next()
+    }
+    else {
+        req.flash("errors", "You must be logged in. :-( ")
+        req.session.save(function() {
+            res.redirect('/')
+        })
+    }
+     
+}
 
 exports.register = function(req, res) {
     let user = new User(req.body)
@@ -42,12 +54,20 @@ exports.logout = function(req,res) {
 
 exports.home = function(req, res) {
     if (req.session.user) {
-        res.render('home-dashboard', {username: req.session.user.username})
+        res.render('home-dashboard')
     }
     else {
-        res.render('home-guest',{errors: req.flash('errors'), regErrors: req.flash('regErrors')})
+        res.render('home-guest',{regErrors: req.flash('regErrors')})
         //let zemu decide where the flash message should be
         //i've put it just below the login for div
         //and also style the div
     }
+}
+
+exports.ifUserExists = function(req, res, next) {
+    next()
+}
+
+exports.profilePage = function(req, res) {
+    res.render('profile')
 }

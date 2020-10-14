@@ -1,17 +1,12 @@
 /*Navigation Bar*/
-.navbar-dark
+.header
 {
-	background-color: #333536!important;
-	padding: 30px 0 30px 0;
-}
-.navbar-dark h1
-{
-	padding: 0;
-	font-size: 55px!important;
+	background-color: #3987b8;
+	box-sizing: border-box;
 }
 .form-control1 ,.button
 {
-	box-shadow: 14px 13px 20px black;
+	box-shadow: 14px 13px 20px rgb(119, 76, 76);
 }
 .jumbotron
 {
@@ -124,6 +119,22 @@ font-size: 25px;
 
 color: #fff;
 }
+/*live validation*/
+.liveValidateMessage {
+	transition: all .5s ease-out;
+	top: -6px;
+	position: absolute;
+	z-index: 1;
+	padding-top: 6px;
+	padding-bottom: 16px;
+	opacity: 0;
+	transform: translateY(100%)
+}
+.liveValidateMessage--visible {
+	opacity: 1;
+	transform: translateY(0)
+}
+
 /*
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
@@ -141,32 +152,3 @@ color: #fff;
 @media (min-width: 1200px) { ... }
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

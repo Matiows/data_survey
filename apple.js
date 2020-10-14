@@ -13,7 +13,7 @@ let sessionOptions = session ({
 })
 
 const router = require('./router')
-
+ 
 apple.use(sessionOptions)
 apple.use(express.urlencoded({extended: false}))
 apple.use(express.json()) 
@@ -23,6 +23,17 @@ apple.set('views', 'view')
 apple.set('view engine', 'ejs')
 
 apple.use(flash())
+
+// this function runs on every request made
+apple.use(function(req,res,next) {
+    // make all error and success messages available from anywhere 
+    res.locals.errors = req.flash("errors")
+    res.locals.success = req.flash("success")
+
+    // make user session data available from view folder
+    res.locals.user = req.session.user
+    next()
+}) 
 apple.use('/', router)
 
 module.exports = apple

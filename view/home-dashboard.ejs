@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Survey</title>
-    </head>
-    <body>
-    <nav>
-        <h1>Logged in <%= username %> </h1>
-        <form action="/logout" method="POST" >
-            <button>Log Out</button>
-        </form>
-    </nav>
-    </body>
-    </html>
+<%- include('includes/header') %>
+<%- include('includes/flash') %>
+
+
+<%- include('includes/footer') %>
